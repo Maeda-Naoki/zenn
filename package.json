@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "textlint": "^13.3.2",
     "zenn-cli": "^0.1.142"
   }
 }
