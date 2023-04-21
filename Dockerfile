@@ -26,3 +26,7 @@ RUN groupdel -f node && userdel -r node && \
 ## https://pnpm.io/ja/installation
 RUN corepack enable && \
     corepack prepare pnpm@8.3.1 --activate
+
+## Add node_modules directory data volume
+RUN mkdir -p ${NodeModulesDir} && chown ${UID} ${NodeModulesDir}
+VOLUME ${NodeModulesDir}
