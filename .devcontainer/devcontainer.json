@@ -2,4 +2,5 @@
 	"name": "ZennContainer",
 	"dockerComposeFile": "../compose.yaml",
 	"service": "node",
+	"workspaceFolder": "/home/author/Article",
 }
