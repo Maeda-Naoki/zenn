@@ -12,6 +12,10 @@
 					}
 				}
 			},
+			"extensions": [
+				// Editor
+				"editorconfig.editorconfig"
+			]
 		}
 	}
 }
