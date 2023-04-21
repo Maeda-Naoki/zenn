@@ -30,3 +30,7 @@ RUN corepack enable && \
 ## Add node_modules directory data volume
 RUN mkdir -p ${NodeModulesDir} && chown ${UID} ${NodeModulesDir}
 VOLUME ${NodeModulesDir}
+
+# Setup working user
+USER ${UID}
+WORKDIR ${UserHomeDir}
