@@ -1,3 +1,5 @@
 {
 	"name": "ZennContainer",
+	"dockerComposeFile": "../compose.yaml",
+	"service": "node",
 }
