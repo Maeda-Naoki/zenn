@@ -7,6 +7,7 @@ services:
       context: ./
       args:
         UID: $UID
+    container_name: Zenn
     volumes:
       - ./:/home/author/Article
       # Data volume mount
