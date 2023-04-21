@@ -2,5 +2,8 @@
   "name": "zenn_contents",
   "version": "0.1.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "zenn-cli": "^0.1.142"
+  }
 }
