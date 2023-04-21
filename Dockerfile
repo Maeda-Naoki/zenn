@@ -21,3 +21,8 @@ ARG NodeModulesDir="${UserHomeDir}/Article/node_modules"
 RUN groupdel -f node && userdel -r node && \
     groupadd -g ${GID} ${GroupName} && \
     adduser --uid ${UID} --gid ${GID} --home ${UserHomeDir} ${UserName}
+
+# Install pnpm
+## https://pnpm.io/ja/installation
+RUN corepack enable && \
+    corepack prepare pnpm@8.3.1 --activate
