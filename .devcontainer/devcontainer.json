@@ -1,0 +1,21 @@
+{
+	"name": "ZennContainer",
+	"dockerComposeFile": "../compose.yaml",
+	"service": "node",
+	"workspaceFolder": "/home/author/Article",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.profiles.linux": {
+					"Bash": {
+						"path": "/bin/bash"
+					}
+				}
+			},
+			"extensions": [
+				// Editor
+				"editorconfig.editorconfig"
+			]
+		}
+	}
+}
