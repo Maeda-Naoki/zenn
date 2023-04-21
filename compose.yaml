@@ -12,4 +12,5 @@ services:
       - ./:/home/author/Article
       # Data volume mount
       - node_modules:/home/author/Article/node_modules
+    working_dir: /home/author/Article
     tty: true
