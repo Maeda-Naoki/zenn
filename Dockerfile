@@ -34,3 +34,6 @@ VOLUME ${NodeModulesDir}
 # Setup working user
 USER ${UID}
 WORKDIR ${UserHomeDir}
+
+# Run bash
+CMD ["/bin/bash"]
