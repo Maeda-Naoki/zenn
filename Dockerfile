@@ -15,3 +15,9 @@ ARG UserHomeDir="/home/author"
 
 ## Node modules setting
 ARG NodeModulesDir="${UserHomeDir}/Article/node_modules"
+
+# Run command
+## Remove default user & Add user (Non-root user)
+RUN groupdel -f node && userdel -r node && \
+    groupadd -g ${GID} ${GroupName} && \
+    adduser --uid ${UID} --gid ${GID} --home ${UserHomeDir} ${UserName}
