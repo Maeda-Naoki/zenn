@@ -1,3 +1,7 @@
 services:
   node:
+    build:
+      context: ./
+      args:
+        UID: $UID
     tty: true
