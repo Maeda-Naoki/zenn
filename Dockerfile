@@ -12,3 +12,6 @@ ARG UID=10000
 ARG GroupName="AuthorGroup"
 ARG UserName="author"
 ARG UserHomeDir="/home/author"
+
+## Node modules setting
+ARG NodeModulesDir="${UserHomeDir}/Article/node_modules"
