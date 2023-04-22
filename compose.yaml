@@ -1,5 +1,6 @@
 volumes:
   node_modules:
+  pnpm-store:
 
 services:
   node:
@@ -12,5 +13,6 @@ services:
       - ./:/home/author/Article
       # Data volume mount
       - node_modules:/home/author/Article/node_modules
+      - pnpm-store:/home/author/Article/pnpm-store
     working_dir: /home/author/Article
     tty: true
