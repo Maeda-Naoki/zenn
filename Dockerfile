@@ -1,5 +1,5 @@
 # Base Docker image
-FROM node:20.0.0-bullseye-slim
+FROM node:21.2.0-bullseye-slim
 
 # Metadata of Docker image
 LABEL maintainer="maeda.naoki.md9@gmail.com"
