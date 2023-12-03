@@ -17,6 +17,8 @@
 				"editorconfig.editorconfig",
 				// textlint
 				"taichi.vscode-textlint",
+				// Prettier
+				"esbenp.prettier-vscode"
 			]
 		}
 	}
