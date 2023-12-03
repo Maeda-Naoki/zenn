@@ -14,7 +14,9 @@
 			},
 			"extensions": [
 				// Editor
-				"editorconfig.editorconfig"
+				"editorconfig.editorconfig",
+				// textlint
+				"taichi.vscode-textlint",
 			]
 		}
 	}
