@@ -11,7 +11,8 @@
 						"path": "/bin/bash"
 					}
 				},
-				"editor.defaultFormatter": "esbenp.prettier-vscode"
+				"editor.defaultFormatter": "esbenp.prettier-vscode",
+				"editor.formatOnSave": true
 			},
 			"extensions": [
 				// Editor
