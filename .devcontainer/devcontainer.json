@@ -10,7 +10,8 @@
 					"Bash": {
 						"path": "/bin/bash"
 					}
-				}
+				},
+				"editor.defaultFormatter": "esbenp.prettier-vscode"
 			},
 			"extensions": [
 				// Editor
