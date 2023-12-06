@@ -12,7 +12,8 @@
 					}
 				},
 				"editor.defaultFormatter": "esbenp.prettier-vscode",
-				"editor.formatOnSave": true
+				"editor.formatOnSave": true,
+				"textlint.languages": ["markdown"]
 			},
 			"extensions": [
 				// Editor
