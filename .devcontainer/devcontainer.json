@@ -10,11 +10,18 @@
 					"Bash": {
 						"path": "/bin/bash"
 					}
-				}
+				},
+				"editor.defaultFormatter": "esbenp.prettier-vscode",
+				"editor.formatOnSave": true,
+				"textlint.languages": ["markdown"]
 			},
 			"extensions": [
 				// Editor
-				"editorconfig.editorconfig"
+				"editorconfig.editorconfig",
+				// textlint
+				"taichi.vscode-textlint",
+				// Prettier
+				"esbenp.prettier-vscode"
 			]
 		}
 	}
