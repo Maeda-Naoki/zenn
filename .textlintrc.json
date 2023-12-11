@@ -5,6 +5,8 @@
   },
   "rules": {
     "preset-ja-spacing": true,
-    "preset-ja-technical-writing": true
+    "preset-ja-technical-writing": {
+      "max": 120
+    }
   }
 }
