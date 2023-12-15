@@ -21,7 +21,9 @@
 				// textlint
 				"taichi.vscode-textlint",
 				// Prettier
-				"esbenp.prettier-vscode"
+				"esbenp.prettier-vscode",
+				// Error Lens
+				"usernamehw.errorlens"
 			]
 		}
 	}
