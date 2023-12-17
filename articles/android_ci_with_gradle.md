@@ -131,3 +131,11 @@ CIのキャッシュを使うことで、2番目以降のJobは、1番目Jobの`
 
 1. `Dockerfile`や`GitLab CI`スクリプトに`Gradle`バージョンを設定しなくて良い
 2. `gradle-wrapper.properties`を変更しないので、ローカル開発[^5]&複数アプリ開発向け
+
+# 今後の構想
+
+#### Docker Build時に`gradle-wrapper.properties`をコピーして、そこから`Gradle`バージョン取得する
+
+取得したバージョンの`Gradle`をDocker Imageに入れれば、環境差分問題と`Gradle`バージョンのメンテナンス問題解決できるんじゃないかと思っています。
+ただ`gradle-wrapper.properties`から`Gradle`バージョン取得するのが、どれだけ可読性に影響するかまだ検証できないので保留です。
+これ出来ればオールオッケーな気がしています。
