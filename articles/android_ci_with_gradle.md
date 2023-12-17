@@ -41,3 +41,32 @@ before_script:
 
 - 各JobでGradleがDLされてCI時間がぞうかしてしまう
   - どうなるかというと、`Build`・`Lint`・`Test`などの各JobでGradleをDLしてしまいます
+
+# Graldeも同梱されているDockerfile
+
+BitriseのAndroid向け`Dockerfile`[^2]を見ると、Android SDKに加えて`Gradle`もインストールしている。  
+インストールする`Gradle`のバージョンについては、環境変数`GRADLE_VERSION`で指定している模様。
+
+```Dockerfile
+...
+# --- Install Gradle from PPA
+
+# Gradle PPA
+ENV GRADLE_VERSION=6.3
+ENV PATH=$PATH:"/opt/gradle/gradle-6.3/bin/"
+RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -P /tmp \
+    && unzip -d /opt/gradle /tmp/gradle-*.zip \
+    && chmod +775 /opt/gradle \
+    && gradle --version \
+    && rm -rf /tmp/gradle*
+...
+```
+
+#### ✅Good Point
+
+- `Gralde`もDocker Imageとして配布されるため環境差分が発生しない
+
+#### ❌Bad Point
+
+- `GRADLE_VERSION`のメンテを忘れると、古い`Gradle`使い続けることになる
+  - ちなみに通常`Gradle`バージョンは、`gradle-wrapper.properties`で定義されている
