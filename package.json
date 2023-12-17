@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "preview": "zenn preview",
+  },
   "devDependencies": {
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
