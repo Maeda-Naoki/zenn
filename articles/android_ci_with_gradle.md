@@ -92,3 +92,32 @@ debugBuild:
 Workingディレクトリ配下の`.gradleHome`に、`Gradle`をDLするように指定して、CIのキャッシュに`.gradleHome`を設定しています。
 これで後続のJobは`.gradleHome`をキャッシュとして再利用します。
 `Gradle`は、**ユーザーホームディレクトリに`Gradle`が既に存在する場合はDLを行わず**、本来のJobを実行します。
+
+# ポイント
+
+ポイントは下記2つ。
+
+1. `--gradle-user-home`オプションで`Gradle`ユーザーホームディレクトリを指定すること
+2. CIキャッシュに、`--gradle-user-home`オプションのディレクトリを指定すること
+
+## `--gradle-user-home`
+
+`--gradle-user-home`オプション[^4]とは、`Gradle`のユーザーホームディレクトリを指定するオプションです。  
+このオプションを指定しなかった場合、`Gradle`はユーザディレクトリ配下の`.gradle`すなわち、`~/.gradle`にDLされます。
+Dockerを使わない開発環境の場合は、これで何も問題ありません。
+ただ`Gradle`DLのユーザーは`root`・Build時のユーザーは一般ユーザーといった構成だと`~/.gradle`が、一致しないことがあります。
+
+`--gradle-user-home`オプション[^4]を使って明示的に`Gradle`ユーザーホームディレクトリを指定するのが良いでしょう。
+
+ちなみに後述の[`distributionBase`](#distributionbase)よりこちらの設定のほうが優先されます。
+
+## `distributionBase`
+
+`Gradle`ユーザーホームディレクトリを指定するには、`gradle-wrapper.properties`内の`distributionBase`で指定する方法もあります。
+通常`distributionBase`は、`GRADLE_USER_HOME`で設定されています。
+そうです、この`GRADLE_USER_HOME`が、ホームディレクトリ配下の`.gradle`を指しています。
+
+じゃあ、`gradle-wrapper.properties`内の`distributionBase`を変更すればいいじゃんと思いました。
+一番分かりやすいのは、`distributionBase`をリポジトリRootディレクトリ配下の`.gradle`に変更することです。
+ただ複数のAndroidアプリを開発している場合、リポジトリ毎に`Gradle`がDLされます。
+各リポジトリで同じバージョンの`Gradle`を使用していたら、ディスク圧迫[^6]してしまってう〜んですね。
