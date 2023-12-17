@@ -5,6 +5,8 @@
   "license": "MIT",
   "scripts": {
     "preview": "zenn preview",
+    "lint:textlint": "textlint *.md",
+    "fix:textlint": "textlint --fix *.md",
   },
   "devDependencies": {
     "husky": "^8.0.3",
