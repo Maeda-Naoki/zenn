@@ -70,3 +70,25 @@ RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.
 
 - `GRADLE_VERSION`のメンテを忘れると、古い`Gradle`使い続けることになる
   - ちなみに通常`Gradle`バージョンは、`gradle-wrapper.properties`で定義されている
+
+# 結局どうしたのか
+
+[よく見るAndroid向けDockerfile](#よく見るandroid向けdockerfile)と[Graldeも同梱されているDockerfile](#graldeも同梱されているdockerfile)を見て、
+「**これCIのキャッシュに任せたほうがいいんじゃない**」っと思ったので下記のよう[^3]にして見ました。
+
+```yml
+debugBuild:
+  stage: debug
+  image: $CI_REGISTRY_IMAGE:latest
+  script:
+    - ./gradlew --gradle-user-home ./.gradleHome assembleDebug
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull-push
+    paths:
+      - ./.gradleHome
+```
+
+Workingディレクトリ配下の`.gradleHome`に、`Gradle`をDLするように指定して、CIのキャッシュに`.gradleHome`を設定しています。
+これで後続のJobは`.gradleHome`をキャッシュとして再利用します。
+`Gradle`は、**ユーザーホームディレクトリに`Gradle`が既に存在する場合はDLを行わず**、本来のJobを実行します。
