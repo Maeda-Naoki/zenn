@@ -6,7 +6,9 @@
   "scripts": {
     "preview": "zenn preview",
     "lint:textlint": "textlint *.md",
+    "lint:prettier": "prettier --check **/*.md",
     "fix:textlint": "textlint --fix *.md",
+    "fix:prettier": "prettier --write --cache **/*.md"
   },
   "devDependencies": {
     "husky": "^8.0.3",
