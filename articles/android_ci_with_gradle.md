@@ -144,3 +144,12 @@ CIのキャッシュを使うことで、2番目以降のJobは、1番目Jobの`
 
 正直この構成も完璧だと思っておりません。
 改善案あれば、この記事のコメントまたは[こちら](https://gitlab.com/naoki_maeda/AndroidCI/-/issues)にご意見頂けると幸いです。
+
+<!-- 脚注 -->
+
+[^1]: [Android.gitlab-ci.yml](https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Android.gitlab-ci.yml)
+[^2]: [bitrise-io](https://github.com/bitrise-io/android/blob/master/Dockerfile)
+[^3]: [Android CI](https://gitlab.com/naoki_maeda/AndroidCI/-/blob/main/.gitlab/ci/build.gitlab-ci.yml)
+[^4]: [Environment options](https://docs.gradle.org/current/userguide/command_line_interface.html#sec:environment_options)
+[^5]: Dockerを使わず、ホストOSにインストールしたAndroid Studioで開発する環境を指します。
+[^6]: Gradle v8.5で150MB程あるので、塵も積もれば厳しいです
