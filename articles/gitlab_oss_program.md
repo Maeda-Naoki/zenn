@@ -71,3 +71,10 @@ GitLab for Open Source Programへの参加条件は3つ[^1]です。
 > Take screenshots. During the application process, you'll need to provide three screenshots of your project. We suggest taking them in advance, since you’ll need to submit them on the second page of the application form.
 
 :::
+
+## 登録完了
+
+登録が完了すると下記のようなメールが届きます。  
+![](https://storage.googleapis.com/zenn-user-upload/271e637472b9-20231223.png)
+
+たったこれだけの登録で[GitLab Ultimate](https://about.gitlab.com/solutions/open-source/#:~:text=potential.%20Features%20of-,GitLab%20Ultimate,-%E2%80%94including%2050%2C000%20compute)が付与されるのは太っ腹以外の何者でもないので皆さま是非登録させてもらいましょう。
