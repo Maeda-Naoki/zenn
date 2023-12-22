@@ -39,3 +39,13 @@ GitLab v16.1までは、`CI/CD minutes`と呼ばれていました。
 self-managed版GitLabは、Runnerも自前用意なのでCompute quotaに関する恩恵はなし。
 
 :::
+
+## 参加条件
+
+GitLab for Open Source Programへの参加条件は3つ[^1]です。
+
+1. MITライセンスなどの **[OSI Approved Licenses](https://opensource.org/licenses/)を設定していること**
+2. **非営利であること**
+3. **Publicリポジトリであること**
+
+一般的なOSSリポジトリであれば、上記条件は自然と満たしています。
