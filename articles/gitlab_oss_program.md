@@ -29,3 +29,13 @@ GitLab v16.1までは、`CI/CD minutes`と呼ばれていました。
 ![](https://storage.googleapis.com/zenn-user-upload/9320e26d09d6-20231223.png)
 
 > 昔はPublicなOSSリポジトリは、`CI/CD minutes`にかなり長めの時間が設定されていたが、マイニング対策か[制限時間が設定された](https://about.gitlab.com/blog/2020/09/01/ci-minutes-update-free-users/)。
+
+# [GitLab for Open Source Program](https://about.gitlab.com/solutions/open-source/)
+
+[GitLab for Open Source Program](https://about.gitlab.com/solutions/open-source/)に参加できれば、self-managedまたはSaaS版のGitLabで[GitLab Ultimate](https://about.gitlab.com/solutions/open-source/#:~:text=potential.%20Features%20of-,GitLab%20Ultimate,-%E2%80%94including%2050%2C000%20compute)の機能が開放されます。
+
+:::message
+
+self-managed版GitLabは、Runnerも自前用意なのでCompute quotaに関する恩恵はなし。
+
+:::
