@@ -19,3 +19,13 @@ https://qiita.com/advent-calendar/2023/gitlab
 - [GitLab.com](https://gitlab.com/)のFreeアカウントで使える[GitLab CI](https://docs.gitlab.com/ee/ci/)の時間は400分。
 - [GitLab for Open Source](https://about.gitlab.com/solutions/open-source/)に登録すると[GitLab Ultimate](https://about.gitlab.com/solutions/open-source/#:~:text=potential.%20Features%20of-,GitLab%20Ultimate,-%E2%80%94including%2050%2C000%20compute)の機能が開放されるので[GitLab CI](https://docs.gitlab.com/ee/ci/)の時間は50,000分になる。
 - [GitLab for Open Source](https://about.gitlab.com/solutions/open-source/)は、OSSライセンス設定しているPublicリポジトリなら登録できる。
+
+# [GitLab CI](https://docs.gitlab.com/ee/ci/)のCompute quota
+
+GitLab v16.1までは、`CI/CD minutes`と呼ばれていました。  
+要するに[GitLab CI](https://docs.gitlab.com/ee/ci/)の共用Runnerを動かせる時間です。  
+[アカウント種別](https://about.gitlab.com/pricing/)によって時間は異なるが、Freeアカウントであれば400分使用できる。
+
+![](https://storage.googleapis.com/zenn-user-upload/9320e26d09d6-20231223.png)
+
+> 昔はPublicなOSSリポジトリは、`CI/CD minutes`にかなり長めの時間が設定されていたが、マイニング対策か[制限時間が設定された](https://about.gitlab.com/blog/2020/09/01/ci-minutes-update-free-users/)。
