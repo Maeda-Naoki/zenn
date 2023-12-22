@@ -78,3 +78,8 @@ GitLab for Open Source Programへの参加条件は3つ[^1]です。
 ![](https://storage.googleapis.com/zenn-user-upload/271e637472b9-20231223.png)
 
 たったこれだけの登録で[GitLab Ultimate](https://about.gitlab.com/solutions/open-source/#:~:text=potential.%20Features%20of-,GitLab%20Ultimate,-%E2%80%94including%2050%2C000%20compute)が付与されるのは太っ腹以外の何者でもないので皆さま是非登録させてもらいましょう。
+
+## おまけ
+
+[GitLab for Open Source Program](https://about.gitlab.com/solutions/open-source/)は、 **1年毎に更新が必要** [^2] です。
+3ヶ月前から更新可能なようですので、早めに更新しましょう。
