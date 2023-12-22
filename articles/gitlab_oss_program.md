@@ -49,3 +49,25 @@ GitLab for Open Source Programへの参加条件は3つ[^1]です。
 3. **Publicリポジトリであること**
 
 一般的なOSSリポジトリであれば、上記条件は自然と満たしています。
+
+## 登録手順
+
+下の入力欄を埋めるだけでいい。
+
+![](https://storage.googleapis.com/zenn-user-upload/df820660c1b5-20231223.png)
+
+主な入力内容は下記になります。
+
+- 名前
+- メールアドレス
+- プロジェクト説明
+- プロジェクトの公開設定
+- ライセンス情報
+
+:::message
+
+ライセンス情報は、LICENSEファイルのリンクに加えてスクショが必要です。
+
+> Take screenshots. During the application process, you'll need to provide three screenshots of your project. We suggest taking them in advance, since you’ll need to submit them on the second page of the application form.
+
+:::
