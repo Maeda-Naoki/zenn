@@ -6,6 +6,14 @@ topics: ["Android", "Gradle", "CI"]
 published: true
 ---
 
+:::message
+
+この記事は、[Android Advent Calendar 2023](https://qiita.com/advent-calendar/2023/android)の18日目の記事になります。
+
+:::
+
+https://qiita.com/advent-calendar/2023/android
+
 # TL;DR
 
 - CIでGradleを忘れがちで各JobでGradle DLして時間もったいない
