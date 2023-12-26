@@ -6,6 +6,14 @@ topics: ["Android", "Gradle", "CI"]
 published: true
 ---
 
+:::message
+
+この記事は、[Android Advent Calendar 2023](https://qiita.com/advent-calendar/2023/android)の18日目の記事になります。
+
+:::
+
+https://qiita.com/advent-calendar/2023/android
+
 # TL;DR
 
 - CIでGradleを忘れがちで各JobでGradle DLして時間もったいない
@@ -14,7 +22,7 @@ published: true
 
 # よく見るAndroid向けDockerfile
 
-GitLab CIのテンプレート[^1]を見ると、Android SDKはインストールしているが`Gradle`については全く触れていない。
+[GitLab CIのテンプレート](https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Android.gitlab-ci.yml)を見ると、Android SDKはインストールしているが`Gradle`については全く触れていない。
 
 ```yml
 # Packages installation before running script
@@ -44,7 +52,7 @@ before_script:
 
 # Graldeも同梱されているDockerfile
 
-BitriseのAndroid向け`Dockerfile`[^2]を見ると、Android SDKに加えて`Gradle`もインストールしている。  
+[BitriseのAndroid向け`Dockerfile`](https://github.com/bitrise-io/android/blob/master/Dockerfile)を見ると、Android SDKに加えて`Gradle`もインストールしている。  
 インストールする`Gradle`のバージョンについては、環境変数`GRADLE_VERSION`で指定している模様。
 
 ```Dockerfile
@@ -74,7 +82,7 @@ RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.
 # 結局どうしたのか
 
 [よく見るAndroid向けDockerfile](#よく見るandroid向けdockerfile)と[Graldeも同梱されているDockerfile](#graldeも同梱されているdockerfile)を見て、
-「**これCIのキャッシュに任せたほうがいいんじゃない**」っと思ったので下記のよう[^3]にして見ました。
+「**これCIのキャッシュに任せたほうがいいんじゃない**」っと思ったので[下記のよう](https://gitlab.com/naoki_maeda/AndroidCI/-/blob/main/.gitlab/ci/build.gitlab-ci.yml)にして見ました。
 
 ```yml
 debugBuild:
@@ -102,7 +110,7 @@ Workingディレクトリ配下の`.gradleHome`に、`Gradle`をDLするよう�
 
 ## `--gradle-user-home`
 
-`--gradle-user-home`オプション[^4]とは、`Gradle`のユーザーホームディレクトリを指定するオプションです。  
+[`--gradle-user-home`オプション](https://docs.gradle.org/current/userguide/command_line_interface.html#sec:environment_options)とは、`Gradle`のユーザーホームディレクトリを指定するオプションです。  
 このオプションを指定しなかった場合、`Gradle`はユーザディレクトリ配下の`.gradle`すなわち、`~/.gradle`にDLされます。
 Dockerを使わない開発環境の場合は、これで何も問題ありません。
 ただ`Gradle`DLのユーザーは`root`・Build時のユーザーは一般ユーザーといった構成だと`~/.gradle`が、一致しないことがあります。
@@ -147,9 +155,5 @@ CIのキャッシュを使うことで、2番目以降のJobは、1番目Jobの`
 
 <!-- 脚注 -->
 
-[^1]: [Android.gitlab-ci.yml](https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Android.gitlab-ci.yml)
-[^2]: [bitrise-io](https://github.com/bitrise-io/android/blob/master/Dockerfile)
-[^3]: [Android CI](https://gitlab.com/naoki_maeda/AndroidCI/-/blob/main/.gitlab/ci/build.gitlab-ci.yml)
-[^4]: [Environment options](https://docs.gradle.org/current/userguide/command_line_interface.html#sec:environment_options)
 [^5]: Dockerを使わず、ホストOSにインストールしたAndroid Studioで開発する環境を指します。
 [^6]: Gradle v8.5で150MB程あるので、塵も積もれば厳しいです
