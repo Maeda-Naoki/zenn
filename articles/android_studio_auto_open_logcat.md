@@ -1,5 +1,5 @@
 ---
-title: "Android向けCI回す時、Gradle意識していますか？"
+title: "Android StudioでDebugする時に、自動でLogcat起動する"
 emoji: "🔨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["AndroidStudio", "Debug", "Logcat"]
