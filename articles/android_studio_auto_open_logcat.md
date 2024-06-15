@@ -15,3 +15,5 @@ published: true
 
 ![](https://storage.googleapis.com/zenn-user-upload/562fb0acb55e-20240615.png)
 
+参考
+- [Miscellaneous tab](https://developer.android.com/studio/run/rundebugconfig#miscellaneous-tab)
