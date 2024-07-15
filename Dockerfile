@@ -1,5 +1,5 @@
 # Base Docker image
-FROM node:22.4.0-bookworm
+FROM node:22.4.1-bookworm
 
 # Metadata of Docker image
 LABEL maintainer="maeda.naoki.md9@gmail.com"
