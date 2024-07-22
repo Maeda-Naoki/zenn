@@ -11,7 +11,7 @@
     "fix:prettier": "prettier --write --cache **/*.md"
   },
   "devDependencies": {
-    "husky": "^9.0.11",
+    "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
     "textlint": "^14.0.4",
