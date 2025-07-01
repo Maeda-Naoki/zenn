@@ -30,8 +30,8 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1(textlint@14.5.0)
       zenn-cli:
-        specifier: ^0.1.157
-        version: 0.1.157
+        specifier: ^0.1.162
+        version: 0.1.162
 
 packages:
 
@@ -1376,8 +1376,8 @@ packages:
     engines: {node: '>= 14'}
     hasBin: true
 
-  zenn-cli@0.1.157:
-    resolution: {integrity: sha512-df1JPOwdf3r9dH3YvgiAzfPZllzSB140uXB3EaDtVvxGaDQ2pMsrqaHkhFM6TIAk5KkVX4afN3K4RUwL+S1gKw==}
+  zenn-cli@0.1.162:
+    resolution: {integrity: sha512-tSa/hseSrvQ+JwrpHgwJkfl3Z+pWE/y3ujW4OnP5aFFgnU7QZYaS+6dZJTRkEcwf9t2alViUACMjQevMaiYTqg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3066,7 +3066,7 @@ snapshots:
 
   yaml@2.7.0: {}
 
-  zenn-cli@0.1.157: {}
+  zenn-cli@0.1.162: {}
 
   zlibjs@0.3.1: {}
 
