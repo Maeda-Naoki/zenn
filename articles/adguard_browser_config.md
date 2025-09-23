@@ -55,3 +55,10 @@ google.com.             178     IN      A       142.251.222.46
 ;; WHEN: Tue Sep 23 22:18:50 JST 2025
 ;; MSG SIZE  rcvd: 55
 ```
+
+# 対策
+
+`Chrome`の設定から`プライバシーとセキュリティ`内の`セキュアDNS`設定を変更する。  
+`OSのデフォルト`設定にするだけ
+![ChromeセキュアDNS設定](/images/AdguardBrowserConfig/ChromeSetting.png)
+なぜDNS設定をブラウザレベルでも設定してしまうのか。
