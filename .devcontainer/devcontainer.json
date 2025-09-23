@@ -23,7 +23,9 @@
 				// Prettier
 				"esbenp.prettier-vscode",
 				// Error Lens
-				"usernamehw.errorlens"
+				"usernamehw.errorlens",
+				// Draw.io
+				"hediet.vscode-drawio"
 			]
 		}
 	}
