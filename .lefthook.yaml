@@ -1,0 +1,15 @@
+# Lefthook configuration file
+#
+# Configuretion
+# Ref: https://lefthook.dev/configuration/index.html
+pre-commit:
+    parallel: true
+    jobs:
+        - name: textlint
+          glob: "*.md"
+          run: pnpm exec textlint --fix {staged_files}
+          stage_fixed: true
+        - name: prettier
+          glob: "*.md"
+          run: pnpm exec prettier --write --cache {staged_files}
+          stage_fixed: true

@@ -1,5 +1,5 @@
 # Base Docker image
-FROM node:23.0.0-bookworm
+FROM node:24.8.0-bookworm
 
 # Metadata of Docker image
 LABEL maintainer="maeda.naoki.md9@gmail.com"
@@ -25,7 +25,7 @@ RUN groupdel -f node && userdel -r node && \
 # Install pnpm
 ## https://pnpm.io/ja/installation
 RUN corepack enable && \
-    corepack prepare pnpm@8.3.1 --activate
+    corepack prepare pnpm@10.17.0 --activate
 
 ## Add node_modules directory data volume
 RUN mkdir -p ${NodeModulesDir} && chown ${UID} ${NodeModulesDir}

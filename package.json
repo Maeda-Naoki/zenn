@@ -11,13 +11,12 @@
     "fix:prettier": "prettier --write --cache **/*.md"
   },
   "devDependencies": {
-    "husky": "^9.1.6",
-    "lint-staged": "^15.3.0",
+    "lefthook": "^1.13.1",
     "prettier": "^3.3.3",
-    "textlint": "^14.4.2",
+    "textlint": "^15.2.2",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-ja-spacing": "^2.4.3",
     "textlint-rule-preset-ja-technical-writing": "^12.0.2",
-    "zenn-cli": "^0.1.157"
+    "zenn-cli": "^0.2.3"
   }
 }
