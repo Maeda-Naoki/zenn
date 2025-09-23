@@ -62,3 +62,7 @@ google.com.             178     IN      A       142.251.222.46
 `OSのデフォルト`設定にするだけ
 ![ChromeセキュアDNS設定](/images/AdguardBrowserConfig/ChromeSetting.png)
 なぜDNS設定をブラウザレベルでも設定してしまうのか。
+
+---
+
+[^1]: セキュアDNS OFFでも同じ結果になるはず
