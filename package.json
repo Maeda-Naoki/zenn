@@ -11,7 +11,7 @@
     "fix:prettier": "prettier --write --cache **/*.md"
   },
   "devDependencies": {
-    "lefthook": "^2.0.1",
+    "lefthook": "^2.0.2",
     "prettier": "^3.3.3",
     "textlint": "^15.2.3",
     "textlint-filter-rule-comments": "^1.2.2",
