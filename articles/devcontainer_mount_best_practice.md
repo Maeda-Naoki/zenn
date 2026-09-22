@@ -134,3 +134,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	rm -rf /var/lib/apt/lists/*
 ```
 
+# 参考
+
+- [Dev Container metadata reference](https://containers.dev/implementors/json_reference/)
+- [Improve disk performance](https://code.visualstudio.com/remote/advancedcontainers/improve-performance)
+- [devcontainerの運用ベストプラクティス](https://qiita.com/1mono2/items/5bbf91f588ab9d5cd444)
