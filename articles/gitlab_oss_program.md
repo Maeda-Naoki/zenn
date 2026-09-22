@@ -85,4 +85,5 @@ GitLab for Open Source Programへの参加条件は3つ[^1]です。
 3ヶ月前から更新可能なようですので、早めに更新しましょう。
 
 [^1]: https://about.gitlab.com/solutions/open-source/join/
+
 [^2]: https://about.gitlab.com/solutions/open-source/join/#must-i-renew-my-membership-in-the-program

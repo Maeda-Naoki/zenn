@@ -1,32 +1,43 @@
 {
-	"name": "ZennContainer",
-	"dockerComposeFile": "../compose.yaml",
-	"service": "node",
-	"workspaceFolder": "/home/author/Article",
-	"customizations": {
-		"vscode": {
-			"settings": {
-				"terminal.integrated.profiles.linux": {
-					"Bash": {
-						"path": "/bin/bash"
-					}
-				},
-				"editor.defaultFormatter": "esbenp.prettier-vscode",
-				"editor.formatOnSave": true,
-				"textlint.languages": ["markdown"]
-			},
-			"extensions": [
-				// Editor
-				"editorconfig.editorconfig",
-				// textlint
-				"taichi.vscode-textlint",
-				// Prettier
-				"esbenp.prettier-vscode",
-				// Error Lens
-				"usernamehw.errorlens",
-				// Draw.io
-				"hediet.vscode-drawio"
-			]
-		}
-	}
+  "name": "ZennContainer",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "args": {
+      "PnpmVersion": "12.4.0"
+    }
+  },
+  "remoteUser": "author",
+  "workspaceFolder": "/home/author/Article",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/author/Article,type=bind,consistency=cached",
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=${localWorkspaceFolderBasename}-pnpm-store,target=${containerWorkspaceFolder}/.pnpm-store,type=volume"
+  ],
+  "postCreateCommand": "sudo chown -R $(id -u):$(id -g) ${containerWorkspaceFolder}/node_modules ${containerWorkspaceFolder}/.pnpm-store",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.profiles.linux": {
+          "Bash": {
+            "path": "/bin/bash"
+          }
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "textlint.languages": ["markdown"]
+      },
+      "extensions": [
+        // Editor
+        "editorconfig.editorconfig",
+        // textlint
+        "taichi.vscode-textlint",
+        // Prettier
+        "esbenp.prettier-vscode",
+        // Error Lens
+        "usernamehw.errorlens",
+        // Draw.io
+        "hediet.vscode-drawio"
+      ]
+    }
+  }
 }

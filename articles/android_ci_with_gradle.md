@@ -18,7 +18,7 @@ https://qiita.com/advent-calendar/2023/android
 
 - CIでGradleを忘れがちで各JobでGradle DLして時間もったいない
 - Dockerfile内で直接Gradle versionやPATHを設定しているのはちょくちょく見る
-- `./gradlew --gradle-user-home ./.gradleHome` でGradle展開先を指定するのが複数アプリ開発ではよさげ
+- `./gradlew --gradle-user-home ./.gradleHome`でGradle展開先を指定するのが複数アプリ開発ではよさげ
 
 # よく見るAndroid向けDockerfile
 
@@ -156,4 +156,5 @@ CIのキャッシュを使うことで、2番目以降のJobは、1番目Jobの`
 <!-- 脚注 -->
 
 [^5]: Dockerを使わず、ホストOSにインストールしたAndroid Studioで開発する環境を指します。
+
 [^6]: Gradle v8.5で150MB程あるので、塵も積もれば厳しいです
