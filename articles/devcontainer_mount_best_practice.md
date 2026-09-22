@@ -32,3 +32,29 @@ published: true
 
 ![記事まとめ画像](/images/DevcontainerHostBind/Summary.png)
 
+# 前提
+
+- [`DevContainer`](https://code.visualstudio.com/docs/devcontainers/containers)で開発をコンテナ内で行っている。
+- コンテナでRootユーザーではなく、Non-Rootユーザーを使用している。
+
+上記の場合、コンテナ側のNon-Rootユーザーとホスト側のユーザーのUIDが一致しないと、ファイル保存に失敗してしまう。
+
+### （個人的）これまでの対策
+
+これまでは`compose.yaml`や`Dockerfile`でコンテナ内のNon-RootユーザーのUIDを調整していたが、直接ファイル編集するのは面倒だし、`UID`設定用のスクリプトを使うのもイケてない。
+
+```yaml:compose.yaml
+services:
+  node:
+    build:
+      context: ./
+      args:
+        UID: $UID
+```
+
+```bash:setDotEnv.sh
+#!/bin/bash
+
+echo "UID=$(id -u $USER)" > .env
+```
+
