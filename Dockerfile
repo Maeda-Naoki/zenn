@@ -1,5 +1,5 @@
 # Base Docker image
-FROM node:26.8.2-trixie-slim@sha256:f7bb8247fdb16250dbec7fd0e24f091c6f5f0a29d256f3aef5816a7a369166b2
+FROM node:26.12.1-trixie-slim@sha256:36793bcbb160a6a16cede1e62b93f84e26b78a972a8a4c0b879c1c12f22761ec
 
 # Metadata of Docker image
 LABEL maintainer="maeda.naoki.md9@gmail.com"
